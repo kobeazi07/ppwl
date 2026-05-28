@@ -73,7 +73,7 @@ export const authRoutes = (getPrisma: () => DbClient) =>
               id: String(user.id),
               name: user.name,
               email: user.email,
-              avatarUrl: user.avatar ?? null,
+              avatarUrl: user.avatar_url ?? null,
             },
           }
         } catch (e) {
@@ -115,7 +115,7 @@ export const authRoutes = (getPrisma: () => DbClient) =>
               id: String(user.id),
               name: user.name,
               email: user.email,
-              avatarUrl: user.avatar ?? null,
+              avatarUrl: user.avatar_url ?? null,
             },
           }
         } catch (e) {
@@ -154,7 +154,7 @@ console.log(idToken)
           data: {
             name: googleUser.name,
             email: googleUser.email,
-            avatar: googleUser.picture,
+            avatar_url: googleUser.picture,
             password: null,
           },
         })
@@ -171,7 +171,7 @@ console.log(idToken)
           id: String(user.id),
           name: user.name,
           email: user.email,
-          avatarUrl: user.avatar ?? null,
+          avatarUrl: user.avatar_url ?? null,
         },
       }
     } catch (e) {
